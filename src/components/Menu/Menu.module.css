@@ -1,20 +1,15 @@
 .menu {
     display: flex;
-    justify-content: space-between;
-    width: 40%;
-}
-ol, ul {
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
-}
-a {
+
+.menu a {
     text-decoration: none;
     color: var(--main-color);
 }

@@ -11,4 +11,15 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-}   
+}
+
+.buttonContact {
+    min-height: 2.6rem;
+    padding: 0 .75rem;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    color: var(--main-color);
+    background-color: var(--main-background);
+    line-height: 1;
+    white-space: nowrap;
+}

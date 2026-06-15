@@ -9,12 +9,12 @@ export const PostPage = () => {
 
 
     const params = useParams()
-    console.log({params})
+   // console.log({params})
 
 
      const [post, setPost] = useState<Post | null>(null)
         useEffect(() => {
-            const getPostById = async(id: string) => {
+            const getPostById = async(id: string | undefined) => {
                 const post = await fetch(`https://dummyjson.com/quotes/${id}`, {
                     headers: {
                         "Content-Type": "application/json",

@@ -4,10 +4,10 @@ import styles from "./Button.module.css";
     
 export interface ButtonProps {
     onClick: () => void;
-    className: string;
+    className?: string;
     label: string;
 }
 
-export const Button: FC<ButtonProps> = ({ onClick, className, label }) => {
+export const Button: FC<ButtonProps> = ({ onClick, className = "", label }) => {
     return <button onClick={onClick} className={`${styles.button} ${className}`}>{label}</button>
 }

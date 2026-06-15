@@ -28,10 +28,8 @@ export const BlogPage = () => {
         </Layout>
     )
 }
-interface IPosts {
-    posts: Post[]
-}
-const Posts:FC<IPosts> = ({posts}) =>{
+
+const Posts:FC<{posts: Post[]}> = ({posts}) =>{
 if (posts.length === 0) {
     return <div>Loading...</div>
 }
@@ -39,7 +37,6 @@ return posts.map((post: Post) => (
     <div key={post.id}>
         <Link to={`/blog/${post.id}`}>
         <h2>Quote #{post.id}: {post.author}</h2>
-        <p>{post.quote}</p>
         </Link>
     </div>
 ))
