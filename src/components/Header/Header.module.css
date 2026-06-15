@@ -1,0 +1,14 @@
+.header {
+    min-height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}   
