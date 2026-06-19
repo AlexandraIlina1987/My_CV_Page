@@ -1,9 +1,8 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
+import type { PropsWithChildren } from 'react';
 
 import Modal from '@mui/material/Modal';
-import { Button as CustomButton } from '../../components/Button/Button';
-import { ConnectForm } from '../ConnectForm/ConnectForm';
+
 import { IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -19,28 +18,28 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+type BasicModalProps = PropsWithChildren<{
+  open: boolean;
+  onClose: () => void;
+}>;
 
+export const BasicModal = ({ children, open, onClose }: BasicModalProps) => {
   return (
     <div>
-      <CustomButton onClick={() => handleOpen()} label="Connect With Me" />
-      <Modal open={open} onClose={handleClose}>
+      <Modal open={open} onClose={onClose}>
         <Box sx={style}>
           <IconButton
-            onClick={handleClose}
+            onClick={onClose}
             sx={{
               position: 'absolute',
-              top: 8,
-              right: 8,
+              top: '1px',
+              right: '1px',
             }}>
             <CloseIcon />
           </IconButton>
-          <ConnectForm />
+          {children}
         </Box>
       </Modal>
     </div>
   );
-}
+};

@@ -1,12 +1,12 @@
-import { type ChangeEvent, type FormEvent, useState } from "react";
-import { Box, TextField, Button as MUIButton, Typography } from "@mui/material";
+import { type ChangeEvent, useState } from 'react';
+import { Box, TextField, Button as MUIButton, Typography } from '@mui/material';
 
 export const ConnectForm = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -16,7 +16,7 @@ export const ConnectForm = () => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
   };
@@ -27,12 +27,11 @@ export const ConnectForm = () => {
       onSubmit={handleSubmit}
       sx={{
         maxWidth: 500,
-        mx: "auto",
-        display: "flex",
-        flexDirection: "column",
+        mx: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
         gap: 2,
-      }}
-    >
+      }}>
       <TextField
         label="FirstName"
         name="firstName"
@@ -71,7 +70,7 @@ export const ConnectForm = () => {
         fullWidth
       />
 
-      <Typography sx={{ textAlign: "center" }}>
+      <Typography sx={{ textAlign: 'center' }}>
         Thank you for your message! I'll get back to you as soon as possible.
       </Typography>
 
@@ -80,4 +79,4 @@ export const ConnectForm = () => {
       </MUIButton>
     </Box>
   );
-}
+};

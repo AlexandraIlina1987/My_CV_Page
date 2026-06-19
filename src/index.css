@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Roboto;
+  src:
+    local('Roboto'),
+    url('/assets/Roboto-rt9qBqVk.ttf') format('truetype');
+  font-display: swap;
+}
+
 :root {
   --main-color: #2c363f;
   --main-background: #f2f5ea;
@@ -13,8 +21,8 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: Roboto, system-ui, 'Segoe UI', sans-serif;
+  --heading: Roboto, system-ui, 'Segoe UI', sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -114,3 +122,6 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+
