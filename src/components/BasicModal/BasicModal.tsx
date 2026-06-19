@@ -18,10 +18,10 @@ const style = {
   p: 4,
 };
 
-type BasicModalProps = PropsWithChildren<{
+interface BasicModalProps extends PropsWithChildren {
   open: boolean;
   onClose: () => void;
-}>;
+}
 
 export const BasicModal = ({ children, open, onClose }: BasicModalProps) => {
   return (
