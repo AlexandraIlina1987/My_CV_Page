@@ -1,5 +1,4 @@
 import styles from './Menu.module.css';
-import '../../App.css';
 import { Link } from 'react-router-dom';
 import type { NAVIGATION_ITEMS } from '../../constants/navigation';
 

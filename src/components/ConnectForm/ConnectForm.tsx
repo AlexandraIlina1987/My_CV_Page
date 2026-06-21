@@ -20,7 +20,26 @@ export const ConnectForm = () => {
     e.preventDefault();
     console.log(formData);
   };
-
+  const textFieldStyles = {
+    '& .MuiInputLabel-root': {
+      color: 'var(--text)',
+    },
+    '& .MuiInputLabel-root.Mui-focused': {
+      color: 'var(--text-h)',
+    },
+    '& .MuiOutlinedInput-root': {
+      color: 'var(--text-h)',
+    },
+    '& .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'var(--border)',
+    },
+    '& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'var(--text)',
+    },
+    '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'var(--text-h)',
+    },
+  };
   return (
     <Box
       component="form"
@@ -39,6 +58,7 @@ export const ConnectForm = () => {
         value={formData.firstName}
         onChange={handleChange}
         fullWidth
+        sx={textFieldStyles}
       />
 
       <TextField
@@ -48,6 +68,7 @@ export const ConnectForm = () => {
         value={formData.lastName}
         onChange={handleChange}
         fullWidth
+        sx={textFieldStyles}
       />
 
       <TextField
@@ -58,6 +79,7 @@ export const ConnectForm = () => {
         value={formData.email}
         onChange={handleChange}
         fullWidth
+        sx={textFieldStyles}
       />
 
       <TextField
@@ -68,13 +90,14 @@ export const ConnectForm = () => {
         multiline
         rows={4}
         fullWidth
+        sx={textFieldStyles}
       />
 
-      <Typography sx={{ textAlign: 'center' }}>
+      <Typography sx={{ textAlign: 'center', color: 'var(--text)' }}>
         Thank you for your message! I'll get back to you as soon as possible.
       </Typography>
 
-      <MUIButton type="submit" variant="contained">
+      <MUIButton sx={{ backgroundColor: 'var(--main-color)' }} type="submit" variant="contained">
         Send
       </MUIButton>
     </Box>

@@ -1,16 +1,4 @@
-// import styles from './BurgerMenu.module.css';
-
-// export const BurgerMenu = () => {
-//   return (
-//     <>
-//       {[...Array(3).keys()].map((el) => (
-//         <span key={el} className={styles.line} />
-//       ))}
-//     </>
-//   );
-// };
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';

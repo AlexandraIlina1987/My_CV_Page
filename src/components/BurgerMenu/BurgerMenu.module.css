@@ -1,8 +1,0 @@
-.line {
-  border: solid black 2px;
-  width: 15px;
-  height: 3px;
-  margin: 2px;
-  display: flex;
-  flex-direction: column;
-}

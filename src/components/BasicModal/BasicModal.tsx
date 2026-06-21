@@ -12,8 +12,9 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: 'var(--main-background)',
+  color: 'var(--text)',
+  border: '2px solid var(--border)',
   boxShadow: 24,
   p: 4,
 };
@@ -26,7 +27,7 @@ interface BasicModalProps extends PropsWithChildren {
 export const BasicModal = ({ children, open, onClose }: BasicModalProps) => {
   return (
     <div>
-      <Modal open={open} onClose={onClose}>
+      <Modal disablePortal open={open} onClose={onClose}>
         <Box sx={style}>
           <IconButton
             onClick={onClose}
@@ -34,6 +35,11 @@ export const BasicModal = ({ children, open, onClose }: BasicModalProps) => {
               position: 'absolute',
               top: '1px',
               right: '1px',
+              color: 'var(--text-h)',
+              backgroundColor: 'transparent',
+              '&:hover': {
+                backgroundColor: 'var(--border)',
+              },
             }}>
             <CloseIcon />
           </IconButton>

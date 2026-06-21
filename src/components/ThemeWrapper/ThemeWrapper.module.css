@@ -1,0 +1,31 @@
+.wrapper {
+  min-height: 100svh;
+  background-color: var(--main-background);
+  color: var(--text);
+}
+
+.light {
+  --main-background: #f2f5ea;
+  --text: #6b6375;
+  --text-h: #08060d;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #2c363f;
+--accent-contrast: #f2f5ea;
+--link: #08060d;
+--link-hover: #2c363f;
+}
+
+.dark {
+  --main-background: #16171d;
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #d1d5db;
+  --accent-contrast: #16171d;
+  --link: #f3f4f6;
+  --link-hover: #cbd5e1;
+}
+
+
