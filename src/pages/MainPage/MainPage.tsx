@@ -19,7 +19,7 @@ export const MainPage = () => {
           </p>
           <ConnectButton />
         </div>
-        <img className={styles.mainPhoto} src={heroImage} alt="Оксана" />
+        <img className={styles.mainPhoto} src={heroImage} alt="Aleksandra" />
       </section>
     </Layout>
   );
