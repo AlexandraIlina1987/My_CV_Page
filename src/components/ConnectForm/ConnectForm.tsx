@@ -1,4 +1,4 @@
-import { type ChangeEvent, useState } from 'react';
+import { type ChangeEvent, type FormEvent, useState } from 'react';
 import { Box, TextField, Button as MUIButton, Typography } from '@mui/material';
 
 export const ConnectForm = () => {
@@ -16,7 +16,7 @@ export const ConnectForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
   };
@@ -97,7 +97,16 @@ export const ConnectForm = () => {
         Thank you for your message! I'll get back to you as soon as possible.
       </Typography>
 
-      <MUIButton sx={{ backgroundColor: 'var(--main-color)' }} type="submit" variant="contained">
+      <MUIButton
+        sx={{
+          backgroundColor: 'var(--accent)',
+          color: 'var(--accent-contrast)',
+          '&:hover': {
+            backgroundColor: 'var(--link-hover)',
+          },
+        }}
+        type="submit"
+        variant="contained">
         Send
       </MUIButton>
     </Box>

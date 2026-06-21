@@ -15,11 +15,30 @@ export function BurgerMenu({ menuItems }: BurgerMenuProps) {
 
   return (
     <>
-      <IconButton onClick={() => setOpen(true)}>
+      <IconButton
+        onClick={() => setOpen(true)}
+        sx={{
+          color: 'var(--text-h)',
+          '&:hover': {
+            backgroundColor: 'var(--border)',
+          },
+        }}>
         <MenuIcon />
       </IconButton>
 
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={() => setOpen(false)}
+        ModalProps={{ disablePortal: true }}
+        slotProps={{
+          paper: {
+            sx: {
+              backgroundColor: 'var(--main-background)',
+              color: 'var(--text-h)',
+            },
+          },
+        }}>
         <List sx={{ width: 250 }}>
           {menuItems.map(({ label, path }, index) => (
             <ListItemButton key={`${index}-menu-item`} href={path}>
